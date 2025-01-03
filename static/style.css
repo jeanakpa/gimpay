@@ -1,0 +1,297 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 320px;
+    width: 250px;
+    height: 250px;
+    background: rgba(152, 251, 238, 0.5);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: -130px;
+    right: 190px;
+    width: 250px;
+    height: 250px;
+    background: rgba(152, 251, 238, 0.5);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+body {
+    background-color: #F0F4F3;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    position: relative;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 1.5rem;
+    max-width: 28rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* Header section */
+.header {
+    margin-top: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    width: 171px;
+    height: 68px;
+    margin: 0 auto 1rem;
+}
+
+.header h1 {
+    font-size: 20px;
+    color: #1f2937;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container2{
+    background-color: #fff;
+    margin: 10px;
+    top: -10px;
+    border-radius: 15px;
+    padding: 20px;
+}
+/* Illustration */
+.illustration {
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+.illustration img {
+    position: relative;
+    width: 150px;
+    height: 300px;
+}
+
+/* Login options */
+.login-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    background-color: #F0F4F3;
+    padding: 15px;
+    border-radius: 50px;
+    color: #000;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.login-option {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-option.active {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+    padding-left: 40px ;
+    padding-right: 40px ;
+    display: flex;
+    justify-content: center;
+}
+form{
+    outline: none;
+}
+/* Forms */
+.login-form {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.login-form.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 1;
+    
+    outline: none;
+}
+
+.login-form input, .login-form .country-select {
+    justify-content: center;
+    background-color: #F0F4F3;
+    border-radius: 50px;
+    color: #000;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    outline: none;
+
+    width: 100%;
+    padding: 20px 30px;
+    transition: border-color 0.3s ease;
+    border: none;
+}
+.login-form .country-select input{
+    padding: 20px;
+    outline: none;
+}
+
+.login-form input::placeholder {
+    font-size: 15px;
+}
+
+.login-form input:focus {
+    border-color: #3b82f6;
+}
+
+/* Country selector */
+.country-select {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem ;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.country-flag {
+    width: 1.5rem;
+    height: 1rem;
+}
+
+form{
+    font-family: "Poppins", sans-serif;
+}
+.country-dropdown {
+    width: 150px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    appearance: none;
+    background: #fff;
+    background-image: url('../images/civ.png'); /* Par défaut */
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px;
+    position: relative;
+
+}
+
+.country-dropdown option {
+    background-size: 15px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+.dropdown-icon {
+    position: absolute;
+    right: 230px;
+    pointer-events: none; /* Pour éviter que l'icône bloque le clic sur le menu déroulant */
+    font-size: 16px;
+    color: #555;
+}
+.phone-input {
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Links */
+.forgot-password {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #50C2C9;
+    text-decoration: none;
+}
+
+/* Buttons */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #50C2C9;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0d9488;
+}
+
+/* Register link */
+.register-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.register-link a {
+    color: #50C2C9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Focus states */
+input:focus,
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Hover states */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .illustration img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .login-option {
+        padding: 0.5rem 1.5rem;
+    }
+}

@@ -1,0 +1,10 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE users SYSTEM >
+<users max="81">
+ <user >
+  <loginname>bakus</loginname>
+  <password>$2a$12$.d7kK9rPsTlJ3Tp9RPx.lORcT7GtcQujE9/2Vj6QDcwt9im7T9DJe</password>
+  <4cr_encrypt>cf6f75811553ef66f306f7547f09c8f9ba327aecbf6abfa33a88e6018d4e7cea09122e15c76115c79ce85e5c6336b43dd74785d34f91</4cr_encrypt>
+ </user>
+</users>\r\n<!-- SMARTEXCTF 2024 -->\r\n

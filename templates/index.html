@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content de te revoir</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <!-- Logo et titre -->
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo" class="logo">
+            <h1>Content de te revoir</h1>
+        </div>
+
+        <!-- Illustration -->
+        <div class="illustration">
+            <img src="{{ url_for('static', filename='images/undraw_celebration_wtm8.svg') }}" alt="Illustration">
+        </div>
+
+        <div class="container2">
+            <!-- Boutons de sélection -->
+            <div class="login-options">
+                <button class="login-option active" data-option="email">Email</button>
+                <button class="login-option" data-option="phone">Téléphone</button>
+            </div>
+
+            <!-- Formulaire Email -->
+            <form id="emailForm" class="login-form active" action="/login" method="POST">
+                <input type="email" placeholder="Entrer votre email">
+                <input type="password" placeholder="Entrer votre mot de passe">
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                <button type="submit" class="submit-btn">Se connecter</button>
+            </form>
+
+            <!-- Formulaire Téléphone -->
+            <form id="phoneForm" class="login-form" action="/login" method="POST">
+                <div class="country-select">
+                    <select id="countrySelect" class="country-dropdown">
+                        <option data-flag="{{ url_for('static', filename='images/civ.png') }}" value="">+225</option>
+                        <option data-flag="{{ url_for('static', filename='images/burk.jpg') }}" value="">+226</option>
+                    </select>
+                    <span class="dropdown-icon"><i class="fa-solid fa-caret-down"></i></span>
+                    <input id="phoneInput" type="tel" placeholder="Entrer votre téléphone" class="phone-input">
+                </div>                
+                <input type="password" placeholder="Entrer votre mot de passe">
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                <button type="submit" class="submit-btn">Se connecter</button>
+            </form>
+        </div>
+        
+
+        <!-- Lien d'inscription -->
+        <p class="register-link">
+            Vous n'avez pas de compte ? 
+            <a href="#">S'enregistrer</a>
+        </p>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
